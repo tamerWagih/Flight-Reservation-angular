@@ -1,5 +1,8 @@
 <div class="container">
-  <div *ngIf="flights">
+  <div *ngIf="!flights.length">
+    <h2>Sorry, There is no flights between these two destinations!</h2>
+  </div>
+  <div *ngIf="flights.length">
     <h2>Available Flights</h2>
     <table>
       <tr>
@@ -23,9 +26,6 @@
         <td><button (click)="book(flight)">Book</button></td>
       </tr>
     </table>
-  </div>
-  <div *ngIf="flights === undefined">
-    <h2>Sorry, There is no flights between these two destinations!</h2>
   </div>
 
   <button routerLink="/">Back to search</button>
