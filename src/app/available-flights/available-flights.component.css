@@ -1,0 +1,55 @@
+.container {
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+
+  width: 60%;
+  height: 70%;
+}
+
+table {
+  margin: 50px auto;
+  color: #333;
+  background: white;
+  border: 1px solid grey;
+  font-size: 12pt;
+  border-collapse: collapse;
+}
+table thead th,
+table tfoot th {
+  color: #777;
+  background: rgba(0, 0, 0, 0.1);
+}
+table caption {
+  padding: 0.5em;
+}
+table th,
+table td {
+  padding: 0.5em;
+  border: 1px solid lightgrey;
+}
+
+button {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #60a3bc;
+  padding: 15px;
+  border-radius: 30px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+  margin: 25px;
+}
+
+button:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  background: grey;
+}

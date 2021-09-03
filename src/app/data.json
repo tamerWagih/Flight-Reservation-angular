@@ -1,0 +1,110 @@
+[
+  {
+    "from": "Cairo",
+    "to": "Paris",
+    "departure": "25/10/2021",
+    "arrival": "25/10/2021",
+    "depTime": "1:05 AM",
+    "arrTime": "7:05 AM",
+    "price": 500
+  },
+  {
+    "from": "Cairo",
+    "to": "Paris",
+    "departure": "25/10/2021",
+    "arrival": "25/10/2021",
+    "depTime": "3:05 AM",
+    "arrTime": "10:05 AM",
+    "price": 500
+  },
+  {
+    "from": "Paris",
+    "to": "Cairo",
+    "departure": "30/10/2021",
+    "arrival": "30/10/2021",
+    "depTime": "1:05 AM",
+    "arrTime": "7:05 AM",
+    "price": 500
+  },
+  {
+    "from": "Paris",
+    "to": "Cairo",
+    "departure": "30/10/2021",
+    "arrival": "30/10/2021",
+    "depTime": "3:05 AM",
+    "arrTime": "10:05 AM",
+    "price": 500
+  },
+  {
+    "from": "Cairo",
+    "to": "London",
+    "departure": "25/10/2021",
+    "arrival": "25/10/2021",
+    "depTime": "1:05 AM",
+    "arrTime": "7:05 AM",
+    "price": 500
+  },
+  {
+    "from": "Cairo",
+    "to": "London",
+    "departure": "25/10/2021",
+    "arrival": "25/10/2021",
+    "depTime": "3:05 AM",
+    "arrTime": "10:05 AM",
+    "price": 500
+  },
+  {
+    "from": "London",
+    "to": "Cairo",
+    "departure": "30/10/2021",
+    "arrival": "30/10/2021",
+    "depTime": "1:05 AM",
+    "arrTime": "7:05 AM",
+    "price": 500
+  },
+  {
+    "from": "London",
+    "to": "Cairo",
+    "departure": "30/10/2021",
+    "arrival": "30/10/2021",
+    "depTime": "3:05 AM",
+    "arrTime": "10:05 AM",
+    "price": 500
+  },
+  {
+    "from": "Cairo",
+    "to": "Berlin",
+    "departure": "25/10/2021",
+    "arrival": "25/10/2021",
+    "depTime": "1:05 AM",
+    "arrTime": "7:05 AM",
+    "price": 500
+  },
+  {
+    "from": "Cairo",
+    "to": "Berlin",
+    "departure": "25/10/2021",
+    "arrival": "25/10/2021",
+    "depTime": "3:05 AM",
+    "arrTime": "10:05 AM",
+    "price": 500
+  },
+  {
+    "from": "Berlin",
+    "to": "Cairo",
+    "departure": "30/10/2021",
+    "arrival": "30/10/2021",
+    "depTime": "1:05 AM",
+    "arrTime": "7:05 AM",
+    "price": 500
+  },
+  {
+    "from": "Berlin",
+    "to": "Cairo",
+    "departure": "30/10/2021",
+    "arrival": "30/10/2021",
+    "depTime": "3:05 AM",
+    "arrTime": "10:05 AM",
+    "price": 500
+  }
+]

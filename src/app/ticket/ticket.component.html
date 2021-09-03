@@ -1,0 +1,106 @@
+<div class="container">
+  <div *ngIf="user">
+    <h2 class="header">You Successfully Booked A Ticked!</h2>
+    <div class="box">
+      <div class="clip"></div>
+      <ul class="left">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <ul class="right">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <div class="ticket">
+        <span class="airline">Flight Ticket</span>
+        <span class="airline airlineslip">Flight Ticket</span>
+        <span class="boarding">Boarding pass</span>
+        <div class="content">
+          <span class="jfk">{{
+            user.bookedFlight[user.bookedFlight.length - 1].from
+              .toUpperCase()
+              .substring(0, 3)
+          }}</span>
+          <span class="sfo">{{
+            user.bookedFlight[user.bookedFlight.length - 1].to
+              .toUpperCase()
+              .substring(0, 3)
+          }}</span>
+
+          <span class="jfk jfkslip">{{
+            user.bookedFlight[user.bookedFlight.length - 1].from
+              .toUpperCase()
+              .substring(0, 3)
+          }}</span>
+
+          <span class="sfo sfoslip">{{
+            user.bookedFlight[user.bookedFlight.length - 1].to
+              .toUpperCase()
+              .substring(0, 3)
+          }}</span>
+
+          <div class="sub-content">
+            <span class="name"
+              >PASSENGER NAME<br /><span>{{
+                user.name | uppercase
+              }}</span></span
+            >
+            <span class="flight">FLIGHT N&deg;<br /><span>X3-65C3</span></span>
+            <span class="gate">GATE<br /><span>11B</span></span>
+            <span class="seat">SEAT<br /><span>45A</span></span>
+            <span class="boardingtime"
+              >BOARDING TIME<br /><span
+                >{{ user.bookedFlight[user.bookedFlight.length - 1].depTime }}
+                ON
+                {{
+                  user.bookedFlight[user.bookedFlight.length - 1].departure
+                }}</span
+              ></span
+            >
+
+            <span class="flight flightslip"
+              >FLIGHT N&deg;<br /><span>X3-65C3</span></span
+            >
+            <span class="seat seatslip">SEAT<br /><span>45A</span></span>
+            <span class="name nameslip"
+              >PASSENGER NAME<br /><span>{{
+                user.name | uppercase
+              }}</span></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!user">
+    <h2 class="header">Unfortunately an error has occurred!</h2>
+  </div>
+</div>
+
+<button routerLink="/">Back to search</button>

@@ -1,0 +1,60 @@
+<div class="container">
+  <!-- <div class="center-container"> -->
+  <h2>Search for your flight</h2>
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div id="flight-data">
+      <div class="form-group">
+        <label for="from">From</label>
+        <input
+          ngModel
+          name="from"
+          type="text"
+          id="from"
+          class="form-control"
+          required
+          #from="ngModel"
+        />
+        <div>
+          <span *ngIf="!from.valid && from.touched"
+            >Please enter a valid value!</span
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="to">To</label>
+        <input
+          ngModel
+          name="to"
+          type="text"
+          id="to"
+          class="form-control"
+          required
+          #to="ngModel"
+        />
+        <div>
+          <span *ngIf="!to.valid && to.touched"
+            >Please enter a valid value!</span
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="date">Departure Date</label>
+        <input
+          ngModel
+          name="date"
+          id="date"
+          type="date"
+          class="datepicker-input"
+          required
+          #date="ngModel"
+        />
+        <div>
+          <span *ngIf="!date.valid && date.touched">Please enter a date!</span>
+        </div>
+      </div>
+    </div>
+
+    <button [disabled]="!f.valid" type="submit">Search</button>
+  </form>
+</div>

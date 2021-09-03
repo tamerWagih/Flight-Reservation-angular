@@ -1,0 +1,32 @@
+<div class="container">
+  <div *ngIf="flights">
+    <h2>Available Flights</h2>
+    <table>
+      <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Departure Date</th>
+        <th>Arrival Date</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+      <tr *ngFor="let flight of flights">
+        <td>{{ flight.from }}</td>
+        <td>{{ flight.to }}</td>
+        <td>{{ flight.departure }}</td>
+        <td>{{ flight.arrival }}</td>
+        <td>{{ flight.depTime }}</td>
+        <td>{{ flight.arrTime }}</td>
+        <td>{{ flight.price | currency }}</td>
+        <td><button (click)="book(flight)">Book</button></td>
+      </tr>
+    </table>
+  </div>
+  <div *ngIf="flights === undefined">
+    <h2>Sorry, There is no flights between these two destinations!</h2>
+  </div>
+
+  <button routerLink="/">Back to search</button>
+</div>

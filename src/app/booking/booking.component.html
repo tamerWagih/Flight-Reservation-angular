@@ -1,0 +1,66 @@
+<div class="container">
+  <h2>Book A Flight</h2>
+  <table *ngIf="flight">
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Departure Date</th>
+      <th>Arrival Date</th>
+      <th>Departure Time</th>
+      <th>Arrival Time</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>{{ flight.from }}</td>
+      <td>{{ flight.to }}</td>
+      <td>{{ flight.departure }}</td>
+      <td>{{ flight.arrival }}</td>
+      <td>{{ flight.depTime }}</td>
+      <td>{{ flight.arrTime }}</td>
+      <td>{{ flight.price | currency }}</td>
+    </tr>
+  </table>
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div id="user-data">
+      <div class="form-group">
+        <label for="from">Name</label>
+        <input
+          ngModel
+          name="name"
+          type="text"
+          id="name"
+          class="form-control"
+          required
+          #from="ngModel"
+        />
+        <div>
+          <span *ngIf="!from.valid && from.touched"
+            >Please enter a valid value!</span
+          >
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="to">Email</label>
+        <input
+          ngModel
+          name="email"
+          type="text"
+          id="email"
+          class="form-control"
+          required
+          email
+          #to="ngModel"
+        />
+        <div>
+          <span *ngIf="!to.valid && to.touched"
+            >Please enter a valid email!</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <button [disabled]="!f.valid" type="submit">Complete Booking</button>
+    <button routerLink="/">Back to search</button>
+  </form>
+</div>
